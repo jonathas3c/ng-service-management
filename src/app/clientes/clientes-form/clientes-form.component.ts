@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import {Cliente} from '../cliente';
+import Cliente  from '../cliente';
 
 @Component({
   selector: 'app-clientes-form',
@@ -10,10 +9,17 @@ import {Cliente} from '../cliente';
 export class ClientesFormComponent implements OnInit {
 
   cliente: Cliente;
-  
-  constructor() { }
+
+  constructor() { 
+    this.cliente = new Cliente();
+    this.cliente.nome = 'Jonathas';
+  }
 
   ngOnInit(): void {
+  }
+
+  clicar() {
+    console.log('Cliquei!');
   }
 
 }
